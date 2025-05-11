@@ -2,7 +2,7 @@
 import React from 'react'
 import Image from "next/image";
 
-export default function Solutions(): JSX.Element {
+export default function Solutions() {
   return (
     <section 
     // className="py-16 md:py-20 lg:py-28"
