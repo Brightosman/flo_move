@@ -1,5 +1,6 @@
 import AboutSection from "@/components/About/AboutSection";
 import Solutions from "@/components/About/Solutions";
+import Footer from "@/components/footer/page";
 import Header from "@/components/header/page";
 import Hero from "@/components/Hero/page";
 import ScrollUp from "@/components/scrollToTop/scrollUp";
@@ -13,6 +14,7 @@ export default function Home() {
       <Hero />
       <AboutSection />
       <Solutions />
+      <Footer />
     </>    
   );
 }

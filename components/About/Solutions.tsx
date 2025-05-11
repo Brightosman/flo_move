@@ -4,7 +4,10 @@ import Image from "next/image";
 
 export default function Solutions(): JSX.Element {
   return (
-    <section className="py-16 md:py-20 lg:py-28">
+    <section 
+    // className="py-16 md:py-20 lg:py-28"
+     className="dark:bg-gray-dark relative z-10 overflow-hidden bg-white pb-16 pt-[120px] md:pb-[120px] md:pt-[150px] xl:pb-[160px] xl:pt-[180px] 2xl:pb-[200px] 2xl:pt-[210px]"
+    >
       <div className="container">
         <div className="-mx-4 flex flex-wrap items-center">
           <div className="w-full px-4 lg:w-1/2">

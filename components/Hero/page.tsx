@@ -23,6 +23,10 @@ export default function Hero(): JSX.Element {
                 <p className="dark:text-body-color-dark mb-12 text-base !leading-relaxed text-body-color sm:text-lg md:text-xl">
                   Removal transport Services 
                 </p>
+                <p className="dark:text-body-color-dark mb-12 text-base !leading-relaxed text-body-color sm:text-lg md:text-xl">
+                  We are here to make your moving experience as smooth and stress-free as possible. Our team of experts is dedicated to providing you with
+                  Stress-Free Moving Experience
+                </p>
                 <div className="flex flex-col items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
                   <Link
                     href="#"
