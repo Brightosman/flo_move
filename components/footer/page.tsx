@@ -266,36 +266,42 @@ import Link from 'next/link';
 
 export default function Footer() {
   return (
-    <footer className="bg-[#1B5E20] text-white py-10 px-6 md:px-16">
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-center space-y-8 md:space-y-0">
-        {/* Logo and Description */}
-        <div className="max-w-md">
-          <h2 className="text-2xl font-bold mb-2">FLORIAN Ireland</h2>
-          <p className="text-sm text-gray-200">
-            Providing reliable, professional moving services throughout Ireland. We handle your move with care and a smile.
-          </p>
-        </div>
+    <footer className="bg-[#f1f1f1] text-[#1B5E20] py-12 px-6 md:px-16">
+      <div className="max-w-5xl mx-auto text-center space-y-6">
+        {/* Logo or Brand */}
+        <h2 className="text-2xl font-bold">FloMoving Ireland</h2>
 
-        {/* Navigation Links */}
-        <div className="flex flex-col md:flex-row gap-6">
-          <Link href="/about" className="text-sm hover:underline">
-            About Us
+        {/* Quick Links */}
+        <div className="flex justify-center flex-wrap gap-6 text-sm">
+          <Link href="/about" className="hover:underline">
+            About
           </Link>
-          <Link href="/services" className="text-sm hover:underline">
+          <Link href="/services" className="hover:underline">
             Services
           </Link>
-          <Link href="/contact" className="text-sm hover:underline">
+          <Link href="/faq" className="hover:underline">
+            FAQ
+          </Link>
+          <Link href="/quote" className="hover:underline">
+            Free Quote
+          </Link>
+          <Link href="/contact" className="hover:underline">
             Contact
           </Link>
-          <Link href="/quote" className="text-sm hover:underline">
-            Get a Quote
-          </Link>
         </div>
-      </div>
 
-      {/* Bottom Text */}
-      <div className="mt-8 text-center text-xs text-gray-300">
-        © {new Date().getFullYear()} FLORIAN Ireland. All rights reserved.
+        {/* Divider */}
+        <hr className="border-t border-[#cccccc] w-1/2 mx-auto" />
+
+        {/* Tagline */}
+        <p className="text-sm italic text-[#555]">
+          “Moving Ireland forward — one home at a time.”
+        </p>
+
+        {/* Bottom Line */}
+        <p className="text-xs text-[#777]">
+          © {new Date().getFullYear()} FloMoving Ireland. All rights reserved.
+        </p>
       </div>
     </footer>
   );
