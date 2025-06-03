@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/header/page";
+import Footer from "@/components/footer/page";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -14,8 +15,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "FloMoving Ireland",
-  description: "Biggest movinging company in Ireland",
+  title: "FloRemove Ireland",
+  description: "Biggest movinging and removing company in Ireland",
 };
 
 export default function RootLayout({
@@ -28,8 +29,14 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {/* <Header /> */}
-        {children}
+        <div>
+          <Header />
+        </div>
+        
+        <div> 
+          {children}
+        </div>    
+        <Footer />
       </body>
     </html>
   );

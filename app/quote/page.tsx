@@ -1,0 +1,342 @@
+// 'use client';
+
+// import React, { useState, useRef } from 'react';
+// import { useJsApiLoader, Autocomplete } from '@react-google-maps/api';
+
+// const libraries = ['places'];
+
+// export default function RequestQuote() {
+//   const [form, setForm] = useState({
+//     name: '',
+//     email: '',
+//     phone: '',
+//     pickup: '',
+//     destination: '',
+//     date: '',
+//     size: '',
+//     items: '',
+//     notes: '',
+//   });
+
+//   const pickupRef = useRef<HTMLInputElement>(null);
+//   const destinationRef = useRef<HTMLInputElement>(null);
+
+//   const { isLoaded } = useJsApiLoader({
+//     googleMapsApiKey: process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY!,
+//     libraries,
+//   });
+
+//   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+//     setForm({ ...form, [e.target.name]: e.target.value });
+//   };
+
+//   const handlePlaceChanged = (field: 'pickup' | 'destination') => {
+//     const value = field === 'pickup' ? pickupRef.current?.value : destinationRef.current?.value;
+//     if (value) {
+//       setForm({ ...form, [field]: value });
+//     }
+//   };
+
+//   const handleSubmit = async (e: React.FormEvent) => {
+//   e.preventDefault();
+
+//   try {
+//     const response = await fetch('/api/quote/request-quote', {
+//       method: 'POST',
+//       headers: {
+//         'Content-Type': 'application/json',
+//       },
+//       body: JSON.stringify(form),
+//     });
+
+//     if (response.ok) {
+//       alert('Thanks! We’ll get back to you shortly with a quote.');
+//     } else {
+//       alert('Something went wrong. Please try again.');
+//     }
+//   } catch (error) {
+//     console.error('Submit error:', error);
+//     alert('Error sending request.');
+//   }
+// };
+
+
+//   return (
+//     <section className="bg-[#f9f7f3] min-h-screen py-12 px-6 md:px-20">
+//       <div className="max-w-3xl mx-auto bg-white shadow-lg rounded-2xl p-8 space-y-6">
+//         <h1 className="text-3xl font-bold text-[#1B5E20] text-center">Request a Free Moving Quote</h1>
+//         <p className="text-center text-[#555] mb-6">
+//           Fill in your details below and our team will contact you shortly with a personalized estimate.
+//         </p>
+
+//         <form onSubmit={handleSubmit} className="space-y-4">
+//           <div className="flex flex-col md:flex-row gap-4">
+//             <input
+//               type="text"
+//               name="name"
+//               placeholder="Your Full Name"
+//               required
+//               className="flex-1 px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#1B5E20]"
+//               onChange={handleChange}
+//             />
+//             <input
+//               type="email"
+//               name="email"
+//               placeholder="Email Address"
+//               required
+//               className="flex-1 px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#1B5E20]"
+//               onChange={handleChange}
+//             />
+//           </div>
+
+//           <input
+//             type="tel"
+//             name="phone"
+//             placeholder="Phone Number"
+//             required
+//             className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#1B5E20]"
+//             onChange={handleChange}
+//           />
+
+//           <div className="flex flex-col md:flex-row gap-4">
+//             <Autocomplete onPlaceChanged={() => handlePlaceChanged('pickup')}>
+//                 <input
+//                     // type="text"
+//                     name="pickup"
+//                     placeholder="Pickup Address / Location"
+//                     ref={pickupRef}
+//                     required
+//                     className="flex-1 px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#1B5E20]"
+//                     // onChange={handleChange}
+//                 />
+//             </Autocomplete>
+
+//             <Autocomplete onPlaceChanged={() => handlePlaceChanged('destination')}>
+//                 <input
+//                     // type="text"
+//                     name="destination"
+//                     placeholder="Destination Address"
+//                     ref={destinationRef}
+//                     required
+//                     className="flex-1 px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#1B5E20]"
+//                     onChange={handleChange}
+//                 />
+//             </Autocomplete>
+
+//           </div>
+
+//           <input
+//             type="date"
+//             name="date"
+//             required
+//             className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#1B5E20]"
+//             onChange={handleChange}
+//           />
+
+//           <input
+//               type="text"
+//               name="size"
+//               placeholder="Size of your house in square meters (e.g., 50m², 100m²)..."
+//               required
+//               className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#1B5E20]"
+//               onChange={handleChange}
+//             />
+
+//           <textarea
+//             name="items"
+//             placeholder="List major items to move (e.g., sofa, bed, boxes)..."
+//             rows={4}
+//             className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#1B5E20]"
+//             onChange={handleChange}
+//           />
+
+//           <textarea
+//             name="notes"
+//             placeholder="Any additional notes or requests?"
+//             rows={3}
+//             className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#1B5E20]"
+//             onChange={handleChange}
+//           />
+
+//           <button
+//             type="submit"
+//             className="w-full bg-[#1B5E20] hover:bg-[#155d28] text-white py-3 rounded-xl text-lg font-semibold shadow-md transition"
+//           >
+//             Submit Request
+//           </button>
+//         </form>
+//       </div>
+//     </section>
+//   );
+// }
+
+
+'use client';
+
+import React, { useState, useRef } from 'react';
+import { useJsApiLoader, Autocomplete } from '@react-google-maps/api';
+
+const libraries = ['places'];
+
+export default function RequestQuote() {
+  const [form, setForm] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    pickup: '',
+    destination: '',
+    date: '',
+    size: '',
+    items: '',
+    notes: '',
+  });
+
+  const pickupRef = useRef<HTMLInputElement>(null);
+  const destinationRef = useRef<HTMLInputElement>(null);
+
+  const { isLoaded } = useJsApiLoader({
+    googleMapsApiKey: process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY || '', // fallback
+    libraries,
+  });
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    setForm({ ...form, [e.target.name]: e.target.value });
+  };
+
+  const handlePlaceChanged = (field: 'pickup' | 'destination') => {
+    const value =
+      field === 'pickup' ? pickupRef.current?.value : destinationRef.current?.value;
+    if (value) {
+      setForm((prev) => ({ ...prev, [field]: value }));
+    }
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    try {
+      const response = await fetch('/api/quote/request-quote', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(form),
+      });
+
+      if (response.ok) {
+        alert('Thanks! We’ll get back to you shortly with a quote.');
+      } else {
+        alert('Something went wrong. Please try again.');
+      }
+    } catch (error) {
+      console.error('Submit error:', error);
+      alert('Error sending request.');
+    }
+  };
+
+  if (!isLoaded) return <p className="text-center mt-12">Loading Google Maps...</p>;
+
+  return (
+    <section className="bg-[#f9f7f3] min-h-screen py-12 px-6 md:px-20">
+      <div className="max-w-3xl mx-auto bg-white shadow-lg rounded-2xl p-8 space-y-6">
+        <h1 className="text-3xl font-bold text-[#1B5E20] text-center">
+          Request a Free Moving Quote
+        </h1>
+        <p className="text-center text-[#555] mb-6">
+          Fill in your details below and our team will contact you shortly with a personalized estimate.
+        </p>
+
+        <form onSubmit={handleSubmit} className="space-y-4">
+          <div className="flex flex-col md:flex-row gap-4">
+            <input
+              type="text"
+              name="name"
+              placeholder="Your Full Name"
+              required
+              className="flex-1 px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#1B5E20]"
+              onChange={handleChange}
+            />
+            <input
+              type="email"
+              name="email"
+              placeholder="Email Address"
+              required
+              className="flex-1 px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#1B5E20]"
+              onChange={handleChange}
+            />
+          </div>
+
+          <input
+            type="tel"
+            name="phone"
+            placeholder="Phone Number"
+            required
+            className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#1B5E20]"
+            onChange={handleChange}
+          />
+
+          <div className="flex flex-col md:flex-row gap-4">
+            <Autocomplete onPlaceChanged={() => handlePlaceChanged('pickup')}>
+              <input
+                name="pickup"
+                placeholder="Pickup Address / Location"
+                ref={pickupRef}
+                required
+                className="flex-1 px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#1B5E20]"
+              />
+            </Autocomplete>
+
+            <Autocomplete onPlaceChanged={() => handlePlaceChanged('destination')}>
+              <input
+                name="destination"
+                placeholder="Destination Address"
+                ref={destinationRef}
+                required
+                className="flex-1 px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#1B5E20]"
+              />
+            </Autocomplete>
+          </div>
+
+          <input
+            type="date"
+            name="date"
+            required
+            className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#1B5E20]"
+            onChange={handleChange}
+          />
+
+          <input
+            type="text"
+            name="size"
+            placeholder="Size of your house in square meters (e.g., 50m², 100m²)..."
+            required
+            className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#1B5E20]"
+            onChange={handleChange}
+          />
+
+          <textarea
+            name="items"
+            placeholder="List major items to move (e.g., sofa, bed, boxes)..."
+            rows={4}
+            className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#1B5E20]"
+            onChange={handleChange}
+          />
+
+          <textarea
+            name="notes"
+            placeholder="Any additional notes or requests?"
+            rows={3}
+            className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#1B5E20]"
+            onChange={handleChange}
+          />
+
+          <button
+            type="submit"
+            className="w-full bg-[#1B5E20] hover:bg-[#155d28] text-white py-3 rounded-xl text-lg font-semibold shadow-md transition"
+          >
+            Submit Request
+          </button>
+        </form>
+      </div>
+    </section>
+  );
+}

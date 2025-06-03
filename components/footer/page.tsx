@@ -261,44 +261,113 @@
 // export default Footer;
 
 
+// import React from 'react';
+// import Link from 'next/link';
+
+// export default function Footer() {
+//   return (
+//     <footer className="bg-[#f1f1f1] text-[#1B5E20] py-12 px-6 md:px-16">
+//       <div className="max-w-5xl mx-auto text-center space-y-6">
+//         {/* Logo or Brand */}
+//         <h2 className="text-2xl font-bold">FloMoving Ireland</h2>
+
+//         {/* Quick Links */}
+//         <div className="flex justify-center flex-wrap gap-6 text-sm">
+//           <Link href="/about" className="hover:underline">
+//             About
+//           </Link>
+//           <Link href="/services" className="hover:underline">
+//             Services
+//           </Link>
+//           <Link href="/faq" className="hover:underline">
+//             FAQ
+//           </Link>
+//           <Link href="/quote" className="hover:underline">
+//             Free Quote
+//           </Link>
+//           <Link href="/contact" className="hover:underline">
+//             Contact
+//           </Link>
+//         </div>
+
+//         {/* Divider */}
+//         <hr className="border-t border-[#cccccc] w-1/2 mx-auto" />
+
+//         {/* Tagline */}
+//         <p className="text-sm italic text-[#555]">
+//           “Moving Ireland forward — one home at a time.”
+//         </p>
+
+//         {/* Bottom Line */}
+//         <p className="text-xs text-[#777]">
+//           © {new Date().getFullYear()} FloMoving Ireland. All rights reserved.
+//         </p>
+//       </div>
+//     </footer>
+//   );
+// }
+
 import React from 'react';
 import Link from 'next/link';
+import { FaFacebookF, FaTwitter, FaInstagram } from 'react-icons/fa';
 
 export default function Footer() {
   return (
     <footer className="bg-[#f1f1f1] text-[#1B5E20] py-12 px-6 md:px-16">
       <div className="max-w-5xl mx-auto text-center space-y-6">
-        {/* Logo or Brand */}
+
+        {/* Brand Name */}
         <h2 className="text-2xl font-bold">FloMoving Ireland</h2>
 
-        {/* Quick Links */}
+        {/* Navigation Links */}
         <div className="flex justify-center flex-wrap gap-6 text-sm">
-          <Link href="/about" className="hover:underline">
-            About
-          </Link>
-          <Link href="/services" className="hover:underline">
-            Services
-          </Link>
-          <Link href="/faq" className="hover:underline">
-            FAQ
-          </Link>
-          <Link href="/quote" className="hover:underline">
-            Free Quote
-          </Link>
-          <Link href="/contact" className="hover:underline">
-            Contact
-          </Link>
+          <Link href="/about" className="hover:underline">About</Link>
+          <Link href="/services" className="hover:underline">Services</Link>
+          <Link href="/faq" className="hover:underline">FAQ</Link>
+          <Link href="/quote" className="hover:underline">Free Quote</Link>
+          <Link href="/contact" className="hover:underline">Contact</Link>
         </div>
+
+        {/* Social Media Icons */}
+        <div className="flex justify-center gap-4 text-[#1B5E20]">
+          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+            <FaFacebookF className="text-xl hover:text-[#155d28]" />
+          </a>
+          <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+            <FaTwitter className="text-xl hover:text-[#155d28]" />
+          </a>
+          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <FaInstagram className="text-xl hover:text-[#155d28]" />
+          </a>
+        </div>
+
+        {/* Newsletter Signup */}
+        <form className="flex flex-col md:flex-row justify-center items-center gap-3 mt-4">
+          <input
+            type="email"
+            placeholder="Your email address"
+            className="px-4 py-2 rounded-lg border border-[#ccc] w-72 focus:outline-none focus:ring-2 focus:ring-[#1B5E20]"
+          />
+          <button
+            type="submit"
+            className="bg-[#1B5E20] text-white px-6 py-2 rounded-lg hover:bg-[#155d28] transition"
+          >
+            Subscribe
+          </button>
+        </form>
 
         {/* Divider */}
         <hr className="border-t border-[#cccccc] w-1/2 mx-auto" />
 
-        {/* Tagline */}
+        {/* Tagline & Certifications */}
         <p className="text-sm italic text-[#555]">
           “Moving Ireland forward — one home at a time.”
         </p>
+        <p className="text-xs text-[#777]">
+          Fully insured, licensed, and trusted across Ireland.
+        </p>
 
-        {/* Bottom Line */}
+        {/* Copyright */}
         <p className="text-xs text-[#777]">
           © {new Date().getFullYear()} FloMoving Ireland. All rights reserved.
         </p>

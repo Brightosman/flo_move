@@ -174,6 +174,7 @@
 
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function Hero() {
   return (
@@ -186,9 +187,9 @@ export default function Hero() {
         <p className="text-lg md:text-xl text-[#555] mb-6">
           Professional, reliable, and stress-free moving services across the Emerald Isle.
         </p>
-        <button className="bg-[#1B5E20] hover:bg-[#155d28] text-white text-lg px-6 py-3 rounded-2xl shadow-md transition">
+        <Link href="/quote" className="bg-[#1B5E20] hover:bg-[#155d28] text-white text-lg px-6 py-3 rounded-2xl shadow-md transition">
           Get a Free Quote
-        </button>
+        </Link>
       </div>
 
       {/* Right Image Block */}

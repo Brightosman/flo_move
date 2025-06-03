@@ -80,12 +80,14 @@
 
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 interface Solution {
   title: string;
   description: string;
   imageSrc: string;
   imageAlt: string;
+  href: string;
 }
 
 const solutions: Solution[] = [
@@ -94,30 +96,35 @@ const solutions: Solution[] = [
     description: 'Careful packing, secure transport, and timely delivery to make your home move smooth and stress-free.',
     imageSrc: '/images/solutions/Solutions-1.png',
     imageAlt: 'Residential moving truck in front of a house',
+    href: '/images/solutions/Solutions-1.png',
   },
   {
     title: 'Commercial Moves',
     description: 'Efficient office relocations with minimal downtime and expert handling of sensitive equipment.',
     imageSrc: '/images/solutions/Solutions-2.png',
     imageAlt: 'Office boxes and furniture being moved',
+    href: '/images/solutions/Solutions-1.png',
   },
   {
     title: 'Packing Services',
     description: 'Professional packing with high-quality materials to protect your valuables during transit.',
     imageSrc: '/images/solutions/Solutions-3.png',
     imageAlt: 'Close-up of hands packing fragile items',
+    href: '/images/solutions/Solutions-1.png',
   },
   {
     title: 'Storage Solutions',
     description: 'Safe and flexible storage options to suit short or long-term needs.',
     imageSrc: '/images/solutions/nasa-unsplash.jpg',
     imageAlt: 'Storage facility with neatly stacked boxes',
+    href: '/images/solutions/Solutions-1.png',
   },
   {
     title: 'International Moves',
     description: 'Comprehensive moving services across borders with customs assistance and global coordination.',
     imageSrc: '/images/solutions/Solutions-5.png',
     imageAlt: 'Cargo ship carrying containers',
+    href: '/images/solutions/Solutions-1.png',
   },
 ];
 
@@ -132,9 +139,10 @@ const Solutions: React.FC = () => {
       </div>
 
       <div className="grid gap-12 sm:grid-cols-2 md:grid-cols-3 max-w-7xl mx-auto">
-        {solutions.map(({ title, description, imageSrc, imageAlt }) => (
-          <div
+        {solutions.map(({ title, description, imageSrc, imageAlt, href }) => (
+          <Link
             key={title}
+            href={href}
             className="bg-[#f9f7f3] p-6 rounded-2xl shadow-md hover:shadow-lg transition cursor-default flex flex-col items-center"
           >
             <div className="w-full h-48 relative mb-6 rounded-lg overflow-hidden">
@@ -149,7 +157,7 @@ const Solutions: React.FC = () => {
             </div>
             <h3 className="text-2xl font-semibold text-[#1B5E20] mb-3 text-center">{title}</h3>
             <p className="text-[#555] text-center">{description}</p>
-          </div>
+          </Link>
         ))}
       </div>
     </section>
