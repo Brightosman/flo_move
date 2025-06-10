@@ -15,8 +15,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "FloRemove Ireland",
-  description: "Biggest movinging and removing company in Ireland",
+  title: "Floremoval Ireland",
+  description: "Biggest moving and removing company in Ireland",
 };
 
 export default function RootLayout({

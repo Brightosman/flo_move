@@ -73,8 +73,10 @@ export default function AboutUs() {
                 <Image
                   src={`/images/about/${member}.png`}
                   alt={`${member} - FloRemove`}
-                  fill
+                  // fill
                   className="object-cover"
+                  width={200}
+                  height={200}
                 />
               </div>
               <h3 className="text-lg font-semibold text-[#1B5E20] capitalize">{member}</h3>
