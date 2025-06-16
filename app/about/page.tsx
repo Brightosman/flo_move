@@ -129,16 +129,16 @@ export default function AboutUs() {
         <h2 className="text-3xl font-bold text-[#1B5E20] mb-6">Our Journey</h2>
         <div className="space-y-4 text-left">
           <div>
-            <span className="font-bold text-[#1B5E20]">2012 –</span> FloRemove is founded in Dublin.
+            <span className="font-bold text-[#1B5E20]">2024 –</span> FloRemoval is founded in Dublin.
           </div>
           <div>
-            <span className="font-bold text-[#1B5E20]">2015 –</span> Expanded to nationwide moving.
+            <span className="font-bold text-[#1B5E20]">2025 –</span> Expanded to nationwide moving.
           </div>
           <div>
-            <span className="font-bold text-[#1B5E20]">2020 –</span> Introduced eco-friendly services.
+            <span className="font-bold text-[#1B5E20]">2025 –</span> Introduced eco-friendly services.
           </div>
           <div>
-            <span className="font-bold text-[#1B5E20]">2024 –</span> Served 10,000+ happy customers.
+            <span className="font-bold text-[#1B5E20]">2025 –</span> Served 10,000+ happy customers.
           </div>
         </div>
       </motion.div>
