@@ -317,7 +317,7 @@ export default function Footer() {
       <div className="max-w-5xl mx-auto text-center space-y-6">
 
         {/* Brand Name */}
-        <h2 className="text-2xl font-bold">FloMoving Ireland</h2>
+        <h2 className="text-2xl font-bold">FloRemoval Ireland</h2>
 
         {/* Navigation Links */}
         <div className="flex justify-center flex-wrap gap-6 text-sm">

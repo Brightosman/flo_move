@@ -26,9 +26,9 @@ export default function AboutUs() {
         </div>
 
         <div>
-          <h1 className="text-4xl font-bold text-[#1B5E20] mb-4">About FloRemove</h1>
+          <h1 className="text-4xl font-bold text-[#1B5E20] mb-4">About FloRemoval</h1>
           <p className="text-lg text-[#555] mb-4">
-            FloRemove is Ireland’s trusted, family-owned moving company, committed to delivering
+            FloRemoval is Ireland’s trusted, family-owned moving company, committed to delivering
             stress-free and efficient moving solutions. With over a decade of experience, we help
             families and businesses move forward — seamlessly.
           </p>
@@ -98,7 +98,7 @@ export default function AboutUs() {
         <div className="grid md:grid-cols-3 gap-6 text-[#444]">
           {[
             {
-              quote: "FloRemove made our house move so easy — professional, friendly, and efficient!",
+              quote: "FloRemoval made our house move so easy — professional, friendly, and efficient!",
               name: "Aisling O’Reilly",
             },
             {
