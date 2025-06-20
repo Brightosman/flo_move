@@ -156,17 +156,17 @@ export default  function Header() {
                 } `}
               >
                 <Image
-                  src="/logo.svg"
+                  src="/logo.png"
                   alt="logo"
                   width={16}
                   height={16}
                   // className="w-full dark:hidden"
                 />
                 <Image
-                  src="/logo.svg"
+                  src="/logo.png"
                   alt="logo"
-                  width={50}
-                  height={50}
+                  width={100}
+                  height={100}
                   // className="hidden w-full dark:block"
                 />
               </Link>
