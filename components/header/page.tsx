@@ -1,109 +1,9 @@
-// 'use client';
-// import React, { useEffect, useState } from 'react';
-// import Image from 'next/image';
-// import Link from 'next/link';
-// import { usePathname } from 'next/navigation';
-// import ThemeToggle from './ThemeToggler';
-
-// export default function Header() {
-//   const pathname = usePathname();
-//   const [navbarOpen, setNavbarOpen] = useState(false);
-//   const [sticky, setSticky] = useState(false);
-
-//   useEffect(() => {
-//     const handleScroll = () => {
-//       setSticky(window.scrollY >= 80);
-//     };
-
-//     window.addEventListener('scroll', handleScroll);
-//     return () => window.removeEventListener('scroll', handleScroll);
-//   }, []);
-
-//   const navLinkClass = (path: string) =>
-//     `flex py-2 text-base lg:inline-flex lg:px-0 lg:py-6 ${
-//       pathname === path
-//         ? 'text-primary dark:text-white'
-//         : 'text-dark hover:text-primary dark:text-white/70 dark:hover:text-white'
-//     }`;
-
-//   return (
-//     <header
-//       className={`header left-0 top-0 z-40 flex w-full items-center transition ${
-//         sticky
-//           ? 'fixed z-[9999] bg-white !bg-opacity-80 shadow-sticky backdrop-blur-sm dark:bg-gray-dark dark:shadow-sticky-dark'
-//           : 'absolute bg-transparent'
-//       }`}
-//     >
-//       <div className="container">
-//         <div className="relative -mx-4 flex items-center justify-between">
-//           {/* Logo */}
-//           <div className="w-60 max-w-full px-4 xl:mr-12">
-//             <Link href="/" className={`block w-full ${sticky ? 'py-5 lg:py-2' : 'py-8'}`}>
-//               <Image src="/logo.svg" alt="logo" width={50} height={50} className="dark:hidden" />
-//               <Image src="/logo.svg" alt="logo" width={50} height={50} className="hidden dark:block" />
-//             </Link>
-//           </div>
-
-//           {/* Nav and toggler */}
-//           <div className="flex w-full items-center justify-between px-4">
-//             {/* Mobile Toggler */}
-//             <button
-//               onClick={() => setNavbarOpen(!navbarOpen)}
-//               className="absolute right-4 top-1/2 block -translate-y-1/2 rounded-lg px-3 py-2 ring-primary focus:ring-2 lg:hidden"
-//               aria-label="Toggle Menu"
-//               aria-expanded={navbarOpen}
-//             >
-//               <span className={`block h-0.5 w-7 bg-black dark:bg-white transition-all ${navbarOpen ? 'rotate-45 translate-y-[7px]' : ''}`} />
-//               <span className={`block h-0.5 w-7 my-1 bg-black dark:bg-white transition-all ${navbarOpen ? 'opacity-0' : ''}`} />
-//               <span className={`block h-0.5 w-7 bg-black dark:bg-white transition-all ${navbarOpen ? '-rotate-45 -translate-y-[7px]' : ''}`} />
-//             </button>
-
-//             {/* Nav Menu */}
-//             <nav
-//               className={`navbar absolute right-0 z-30 w-[250px] rounded border border-body-color/50 bg-white px-6 py-4 duration-300 dark:border-body-color/20 dark:bg-dark lg:visible lg:static lg:w-auto lg:border-none lg:bg-transparent lg:p-0 lg:opacity-100 ${
-//                 navbarOpen ? 'top-full opacity-100' : 'invisible top-[120%] opacity-0'
-//               }`}
-//             >
-//               <ul className="block lg:flex lg:space-x-12">
-//                 <li><Link href="/" className={navLinkClass('/')}>Home</Link></li>
-//                 <li><Link href="/about" className={navLinkClass('/about')}>About</Link></li>
-//                 <li><Link href="/quote" className={navLinkClass('/quote')}>Quote</Link></li>
-//                 <li><Link href="/sections/about/solutions" className={navLinkClass('/sections/about/solutions')}>Services</Link></li>
-//                 <li><Link href="/contact" className={navLinkClass('/contact')}>Contact</Link></li>
-//               </ul>
-//             </nav>
-
-//             {/* Actions */}
-//             <div className="flex items-center gap-4 pr-16 lg:pr-0">
-//               <Link
-//                 href="/signin"
-//                 className="hidden px-7 py-3 text-base font-medium text-dark hover:opacity-70 dark:text-white md:block"
-//               >
-//                 Sign In
-//               </Link>
-//               <Link
-//                 href="/signup"
-//                 className="hidden rounded-sm bg-primary px-8 py-3 text-base font-medium text-white shadow-btn transition duration-300 hover:bg-opacity-90 hover:shadow-btn-hover md:block"
-//               >
-//                 Sign Up
-//               </Link>
-//               <ThemeToggle />
-//             </div>
-//           </div>
-//         </div>
-//       </div>
-//     </header>
-//   );
-// }
-
-
 "use client";
 import React from 'react'
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-import ThemeToggler from "./ThemeToggler";
 
 export default  function Header() {
     // Navbar toggle
@@ -155,13 +55,7 @@ export default  function Header() {
                   sticky ? "py-5 lg:py-2" : "py-8"
                 } `}
               >
-                <Image
-                  src="/logo.png"
-                  alt="logo"
-                  width={16}
-                  height={16}
-                  // className="w-full dark:hidden"
-                />
+                
                 <Image
                   src="/logo.png"
                   alt="logo"
@@ -255,9 +149,7 @@ export default  function Header() {
                 >
                   Sign Up
                 </Link>
-                <div>
-                  <ThemeToggler />
-                </div>
+                
               </div>
             </div>
           </div>
