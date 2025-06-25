@@ -15,8 +15,25 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Floremoval Ireland",
-  description: "Biggest moving and removing company in Ireland",
+  title: "Floremoval Ireland | Professional Moving Services in Ireland",
+  description: "Biggest moving and removing company in Ireland, Reliable, affordable moving services across Ireland. ",
+  metadataBase: new URL('https://www.floremoval.com'),
+
+  openGraph: {
+    title: 'Floremoval | Professional Moving Services in Ireland',
+    description: 'Reliable, affordable moving services across Ireland.',
+    url: 'https://www.floremoval.com',
+    siteName: 'Floremoval',
+    images: [
+      {
+        url: '/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'Floremoval Office and Team',
+      },
+    ],
+    type: 'website',
+  },
 };
 
 export default function RootLayout({
