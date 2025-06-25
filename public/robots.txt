@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.floremoval.com
+
+# Sitemaps
+Sitemap: https://www.floremoval.com/sitemap.xml
