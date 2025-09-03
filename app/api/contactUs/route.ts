@@ -21,7 +21,7 @@ export async function POST(req: Request) {
         <p><strong>Subject:</strong> ${subject}</p>
         <p><strong>Message:</strong><br/>${message.replace(/\n/g, '<br />')}</p>
         <hr />
-        <p>This message was sent automatically from the GreenMove website.</p>
+        <p>This message was sent automatically from the FloRemovalwebsite.</p>
       `,
     });
 

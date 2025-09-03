@@ -20,7 +20,7 @@ export const CustomerConfirmationEmail = ({ name }: CustomerConfirmationEmailPro
         <Text>
           Best regards,
           <br />
-          The GreenMove Team
+          The FloRemovalTeam
         </Text>
       </Container>
     </Body>
