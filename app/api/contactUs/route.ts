@@ -11,8 +11,8 @@ export async function POST(req: Request) {
   try {
     // Send email to your company
     await resend.emails.send({
-      from: 'FloRemoval Ireland <onboarding@baba9ja.com>', // Temporary domain
-      to: ['brichiile@gmail.com'],
+      from: 'FloRemoval Ireland <noreply@notifications.floremoval.com>', // Temporary domain
+      to: ["brichiile@gmail.com","emmanuelabudu53@gmail.com"],
       subject: 'New Moving Quote Request',
       html: `
         <h2>New Quote Request from ${name}</h2>
@@ -27,7 +27,7 @@ export async function POST(req: Request) {
 
     // Send confirmation email to the customer
     await resend.emails.send({
-      from: 'FloRemoval Ireland <onboarding@baba9ja.com>',
+      from: 'FloRemoval Ireland <noreply@notifications.floremoval.com>',
       to: [email],
       subject: 'We Received Your Message',
       react: CustomerConfirmationEmail({ name }),

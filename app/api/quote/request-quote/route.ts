@@ -200,15 +200,15 @@ export async function POST(req: Request) {
 
   try {
     await resend.emails.send({
-      from: "FloRemoval Ireland <onboarding@baba9ja.com>",
-      to: ["brichiile@gmail.com", "emmanuelabudu53@gmail.com"],
+      from: "FloRemoval Ireland <noreply@notifications.floremoval.com>",
+      to: ["brichiile@gmail.com","emmanuelabudu53@gmail.com"],
       subject: "New Moving Quote Request",
       html: companyHtml,
     });
 
     if (email) {
       await resend.emails.send({
-        from: "FloRemoval Ireland <onboarding@baba9ja.com>",
+        from: "FloRemoval Ireland <noreply@notifications.floremoval.com>",
         to: [email],
         subject: "We Received Your Moving Quote Request",
         react: CustomerConfirmationEmail({ name }),
