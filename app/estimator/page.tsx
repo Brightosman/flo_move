@@ -23,19 +23,19 @@ export type Item = {
 // ---------------- Catalog ----------------
 const CATALOG: Item[] = [
   // Living & Dining Room
-  { id: "sofa_3", name: "Sofa (3-seater)", category: "Living & Dining Room", volumeM3: 1.5 },
-  { id: "sofa_corner", name: "Corner sofa", category: "Living & Dining Room", volumeM3: 2.2 },
+  { id: "sofa_3", name: "Sofa (3-seater)", category: "Living & Dining Room", volumeM3: 2.5 },
+  { id: "sofa_corner", name: "Corner sofa", category: "Living & Dining Room", volumeM3: 3.0 },
   { id: "armchair", name: "Armchair", category: "Living & Dining Room", volumeM3: 0.6 },
   { id: "recliner", name: "Recliner chair", category: "Living & Dining Room", volumeM3: 0.8 },
   { id: "coffee_table", name: "Coffee table", category: "Living & Dining Room", volumeM3: 0.3 },
   { id: "side_table", name: "Side table", category: "Living & Dining Room", volumeM3: 0.2 },
-  { id: "tv_55", name: "TV up to 55\"", category: "Living & Dining Room", volumeM3: 0.2 },
-  { id: "tv_65_plus", name: "TV 65\"+", category: "Living & Dining Room", volumeM3: 0.3 },
-  { id: "tv_stand", name: "TV stand / unit", category: "Living & Dining Room", volumeM3: 0.4 },
+  { id: "tv_55", name: "TV up to 55\"", category: "Living & Dining Room", volumeM3: 0.3 },
+  { id: "tv_65_plus", name: "TV 65\"+", category: "Living & Dining Room", volumeM3: 0.4 },
+  { id: "tv_stand", name: "TV stand / unit", category: "Living & Dining Room", volumeM3: 0.2 },
   { id: "dining_table", name: "Dining table", category: "Living & Dining Room", volumeM3: 1.2 },
   { id: "dining_chair", name: "Dining chair", category: "Living & Dining Room", volumeM3: 0.2 },
-  { id: "bookcase", name: "Bookcase (tall)", category: "Living & Dining Room", volumeM3: 0.8 },
-  { id: "lamp_floor", name: "Floor lamp", category: "Living & Dining Room", volumeM3: 0.15 },
+  { id: "bookcase", name: "Bookcase (tall)", category: "Living & Dining Room", volumeM3: 2.0 },
+  { id: "lamp_floor", name: "Floor lamp", category: "Living & Dining Room", volumeM3: 1.0 },
   { id: "frame_large", name: "Large picture / frame", category: "Living & Dining Room", volumeM3: 0.08 },
 
   // Kitchen & Appliances

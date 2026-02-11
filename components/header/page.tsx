@@ -93,8 +93,8 @@ export default function Header() {
                     <Link href="/about" className={linkClass("/about")}>About</Link>
                     <Link href="/quote" className={linkClass("/quote")}>Quote</Link>
                     <Link
-                      href="/sections/about/solutions"
-                      className={linkClass("/sections/about/solutions")}
+                      href="/services"
+                      className={linkClass("/services") + " font-medium text-primary dark:text-white"}
                     >
                       Services
                     </Link>

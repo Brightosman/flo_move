@@ -54,6 +54,11 @@ export default function ContactUs() {
           Whether you have a question, need help planning a move, or want to learn more about our services — we’re here to help.
         </p>
 
+        {/* Add phone number */}
+        <p className="text-center text-lg font-semibold text-[#1B5E20] mb-6">
+          Or call us directly: <a href="tel:0899703503" className="underline hover:text-[#155d28]">089-970-3503</a>
+        </p>
+
         <form onSubmit={handleSubmit} className="space-y-4">
           <div className="flex flex-col md:flex-row gap-4">
             <input
