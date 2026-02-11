@@ -129,7 +129,7 @@ export default function AboutUs() {
         <h2 className="text-3xl font-bold text-[#1B5E20] mb-6">Our Journey</h2>
         <div className="space-y-4 text-left">
           <div>
-            <span className="font-bold text-[#1B5E20]">2024 –</span> FloRemoval is founded in Dublin.
+            <span className="font-bold text-[#1B5E20]">2024 –</span> FloRemoval is founded.
           </div>
           <div>
             <span className="font-bold text-[#1B5E20]">2025 –</span> Expanded to nationwide moving.
