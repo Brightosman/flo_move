@@ -51,7 +51,7 @@ export default function DublinRemovalsPage() {
       description="Professional removals in Dublin for homes and offices. Fully insured movers providing stress-free local and nationwide relocations."
       heroImage="/images/services/dublin-hero.jpg"
       heroAlt="Dublin house removals service"
-      phoneNumber="089-970-3503"
+      contactPhone="089-970-3503"
     >
       {/* ✅ SEO FAQ JSON-LD */}
       <script
