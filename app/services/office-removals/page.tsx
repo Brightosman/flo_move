@@ -6,101 +6,104 @@ import ServiceLayout from '@/components/Service/ServiceLayout';
 export default function OfficeRemovalsPage() {
   const faqs = [
     {
-      question: "Do you provide office removals in Ireland?",
+      question: "Do you provide office removals across Ireland?",
       answer:
-        "Yes! FloRemoval specialises in office removals across Ireland, handling desks, IT systems, and sensitive documents with care and efficiency.",
+        "Yes, FloRemoval provides professional office relocations nationwide, including Dublin, Cork, Galway, and Limerick.",
     },
     {
-      question: "Can you handle large corporate moves?",
+      question: "Can you handle large corporate relocations?",
       answer:
-        "Absolutely. From small startups to large corporate offices, we coordinate every stage of your office move professionally.",
+        "Yes. We manage both small office moves and large corporate relocations efficiently and professionally.",
     },
     {
-      question: "Do you offer packing for office equipment?",
+      question: "Do you move IT equipment safely?",
       answer:
-        "Yes, we provide professional packing for office furniture, IT equipment, and sensitive files to ensure safe transport.",
+        "Absolutely. We carefully pack and transport IT systems, servers, and sensitive office equipment.",
     },
     {
-      question: "Are you insured?",
+      question: "Are you fully insured?",
       answer:
-        "FloRemoval is fully licensed and insured. Your office belongings are protected throughout the relocation process.",
-    },
-    {
-      question: "Do you provide nationwide office removals?",
-      answer:
-        "Yes, we offer office removals anywhere in Ireland, including Dublin, Cork, Galway, Limerick, and beyond.",
+        "Yes, FloRemoval is fully licensed and insured for complete peace of mind.",
     },
   ];
 
   return (
     <ServiceLayout
-      title="Office Removals | FloRemoval"
-      description="Professional office removals in Ireland. Fully insured movers handling corporate relocations efficiently, with minimal downtime."
+      title="Office Removals Ireland | FloRemoval"
+      description="Professional office removals across Ireland. Fully insured movers specialising in efficient business relocations with minimal downtime."
       heroImage="/images/services/office-hero.jpg"
-      heroAlt="Office moving"
+      heroAlt="Office relocation service"
       contactPhone="089-970-3503"
     >
-      {/* FAQ JSON-LD */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "FAQPage",
-            "mainEntity": faqs.map(faq => ({
+            "mainEntity": faqs.map((faq) => ({
               "@type": "Question",
               "name": faq.question,
-              "acceptedAnswer": { "@type": "Answer", "text": faq.answer },
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": faq.answer,
+              },
             })),
           }),
         }}
       />
 
-      {/* Long-form SEO content */}
       <section className="bg-[#f9f7f3] px-6 md:px-20 py-12 text-[#555]">
         <div className="max-w-5xl mx-auto space-y-6">
-          <h1 className="text-4xl font-bold text-[#1B5E20]">Professional Office Removals in Ireland</h1>
+
+          <h1 className="text-4xl font-bold text-[#1B5E20]">
+            Professional Office Removals in Ireland
+          </h1>
 
           <p>
-            FloRemoval provides professional office removals across Ireland, ensuring a smooth and efficient relocation for businesses of all sizes.
-            Our fully insured team handles all office furniture, IT systems, and sensitive documents with utmost care.
+            FloRemoval specialises in professional office removals across Ireland.
+            We help businesses relocate efficiently, safely, and with minimal disruption.
           </p>
+
+          <h2 className="text-3xl font-bold text-[#1B5E20]">
+            Efficient Business Relocation
+          </h2>
 
           <p>
-            We understand that downtime can be costly, which is why we plan every move carefully and offer flexible scheduling, including evenings and weekends.
+            We understand that downtime costs money.
+            That’s why our team plans every stage of your office move carefully,
+            offering flexible scheduling including evenings and weekends.
           </p>
 
-          <h2 className="text-3xl font-bold text-[#1B5E20]">Office Removals Across Ireland</h2>
+          <h2 className="text-3xl font-bold text-[#1B5E20]">
+            Safe Handling of Equipment
+          </h2>
 
           <p>
-            From Dublin to Cork, Galway, and Limerick, our nationwide office removal services ensure safe transport and timely delivery.
-            Whether relocating a small startup or a large corporate headquarters, FloRemoval handles every step of the process professionally.
+            From desks and meeting tables to IT systems and confidential files,
+            we pack and transport everything securely using professional materials and techniques.
           </p>
 
-          <h2 className="text-3xl font-bold text-[#1B5E20]">Packing Services for Offices</h2>
+          <h2 className="text-3xl font-bold text-[#1B5E20]">
+            Nationwide Coverage
+          </h2>
 
           <p>
-            We provide full or partial packing services for office equipment, IT systems, sensitive files, and furniture.
-            Using high-quality packing materials, your office belongings remain secure during transport.
+            We provide office removals throughout Dublin, Cork, Galway, Limerick,
+            and across Ireland. No matter the size of your business,
+            FloRemoval delivers a smooth relocation experience.
           </p>
 
-          <h2 className="text-3xl font-bold text-[#1B5E20]">Why Choose FloRemoval for Office Moves?</h2>
-
-          <ul className="list-disc pl-6 space-y-2">
-            <li>Experienced office relocation specialists</li>
-            <li>Fully licensed & insured</li>
-            <li>Flexible scheduling including evenings & weekends</li>
-            <li>Nationwide coverage across Ireland</li>
-            <li>Professional handling of IT systems and sensitive documents</li>
-            <li>Transparent quotes and no hidden fees</li>
-          </ul>
-
-          <h2 className="text-3xl font-bold text-[#1B5E20]">Get Your Free Office Removal Quote</h2>
+          <h2 className="text-3xl font-bold text-[#1B5E20]">
+            Request a Free Office Removal Quote
+          </h2>
 
           <p>
-            Call FloRemoval today at <a href="tel:0899703503" className="text-[#1B5E20] font-semibold">089-970-3503</a> for a free, no-obligation quote.
-            Let our team handle your office move with efficiency, care, and professionalism.
+            Call <a href="tel:0899703503" className="text-[#1B5E20] font-semibold">089-970-3503</a>
+            for a free, no-obligation quote and let our experienced team
+            handle your office move professionally.
           </p>
+
         </div>
       </section>
     </ServiceLayout>
