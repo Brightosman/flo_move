@@ -2,34 +2,33 @@
 
 import React from 'react';
 import ServiceLayout from '@/components/Service/ServiceLayout';
-import { FAQJsonLd } from 'next-seo';
 
 export default function CorkRemovalsPage() {
   const faqs = [
     {
       question: "Do you provide house removals in Cork?",
       answer:
-        "Yes! FloRemoval specialises in house removals across Cork, handling apartments, family homes, and large properties with professional care and efficiency.",
+        "Yes! FloRemoval offers professional house removals in Cork, from apartments to large family homes, ensuring careful handling and timely delivery.",
     },
     {
       question: "Can you handle office moves in Cork?",
       answer:
-        "Absolutely. Our office removals service ensures minimal downtime, secure transport of office furniture, IT equipment, and sensitive documents.",
+        "Absolutely. Our office removals service minimises downtime while safely transporting desks, IT equipment, and sensitive documents.",
     },
     {
       question: "Do you offer packing services?",
       answer:
-        "Yes, we offer full, partial, and fragile-item packing services, using high-quality packing materials to protect your belongings during the move.",
+        "Yes, full, partial, and fragile-item packing services are available with high-quality packing materials.",
     },
     {
       question: "Are you insured?",
       answer:
-        "FloRemoval is fully licensed and insured. Your belongings are protected throughout the entire moving process.",
+        "FloRemoval is fully licensed and insured. Your belongings are protected throughout the entire move.",
     },
     {
       question: "Do you move outside Cork?",
       answer:
-        "Yes. While we specialise in Cork removals, we provide nationwide moving services, including Dublin, Galway, Limerick, and beyond.",
+        "Yes. While we specialise in Cork removals, we provide nationwide moving services, including Dublin, Galway, and Limerick.",
     },
   ];
 
@@ -39,14 +38,22 @@ export default function CorkRemovalsPage() {
       description="Professional removals in Cork for homes and offices. Fully insured, experienced movers providing stress-free local and nationwide moves."
       heroImage="/images/services/cork-hero.jpg"
       heroAlt="Cork house moving"
-      phoneNumber="089-970-3503"
+      contactPhone="089-970-3503"
     >
-      {/* SEO FAQ Schema */}
-      <FAQJsonLd
-        mainEntity={faqs.map((faq) => ({
-          questionName: faq.question,
-          acceptedAnswerText: faq.answer,
-        }))}
+      {/* FAQ JSON-LD */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": faqs.map(faq => ({
+              "@type": "Question",
+              "name": faq.question,
+              "acceptedAnswer": { "@type": "Answer", "text": faq.answer },
+            })),
+          }),
+        }}
       />
 
       {/* Long-form SEO content */}
@@ -57,81 +64,72 @@ export default function CorkRemovalsPage() {
           </h1>
 
           <p>
-            FloRemoval provides expert removals in Cork, delivering reliable, fully insured moving
-            services for both homes and offices. From small apartments in the city centre to large
-            family homes in suburban areas, we handle every move with professionalism and care.
+            FloRemoval is your go-to removals company in Cork, providing reliable and fully insured moving services.
+            From apartments to large homes, our experienced team handles your belongings with utmost care,
+            ensuring a smooth relocation process.
           </p>
 
           <p>
-            Cork’s streets, parking limitations, and property layouts present unique moving challenges.
-            Our experienced movers plan each move carefully, ensuring that furniture, fragile items,
-            and office equipment arrive safely and on schedule.
+            Cork presents unique challenges — narrow streets, parking restrictions, and older buildings. Our
+            team plans every move carefully, ensuring timely delivery and protection of your possessions.
           </p>
-
-          {/* Click-to-call CTA */}
-          <div className="my-8 text-center">
-            <a
-              href="tel:0899703503"
-              className="inline-block bg-[#1B5E20] hover:bg-[#155d28] text-white font-semibold py-3 px-6 rounded-xl text-lg transition"
-            >
-              Call 089-970-3503 Now
-            </a>
-          </div>
 
           <h2 className="text-3xl font-bold text-[#1B5E20]">House Removals in Cork</h2>
 
           <p>
-            Our house removals service covers small apartments, medium-sized homes, and large family
-            residences. We manage disassembly, protective wrapping, loading, transport, and unloading
-            to make your move stress-free.
+            We provide comprehensive house removals across Cork, covering everything from small flats to
+            large family homes. Our services include furniture disassembly, protective wrapping, safe
+            loading, transport, and unloading at your new property.
           </p>
 
           <p>
-            High-quality packing materials, trained staff, and modern vehicles ensure your possessions
-            are transported safely, whether moving across Cork city or to another county.
+            Our trained movers use high-quality packing materials and modern vehicles to guarantee your
+            belongings arrive in perfect condition. We cover all areas including Douglas, Ballincollig,
+            Blackpool, and beyond.
           </p>
 
           <h2 className="text-3xl font-bold text-[#1B5E20]">Office Removals in Cork</h2>
 
           <p>
-            Our office removals service minimises downtime for your business. From desks and filing cabinets
-            to sensitive IT equipment, we manage every aspect of your corporate move professionally.
+            FloRemoval specialises in office relocations in Cork, helping businesses move efficiently while
+            minimising downtime. We handle everything from small offices to large commercial spaces.
+          </p>
+
+          <p>
+            Flexible scheduling, careful handling of IT equipment, and professional service ensure your
+            business move is seamless and stress-free.
           </p>
 
           <h2 className="text-3xl font-bold text-[#1B5E20]">Professional Packing Services</h2>
 
           <p>
-            Full, partial, or fragile-item-only packing services are available to keep your items safe
-            and organised. We use high-quality boxes, bubble wrap, and labelling to protect your
-            belongings throughout the move.
+            We offer full, partial, and fragile-item packing services to keep your belongings secure. High-quality
+            boxes, wrapping, and organised labelling make unpacking at your new Cork property effortless.
           </p>
 
-          <h2 className="text-3xl font-bold text-[#1B5E20]">Moving Across Ireland from Cork</h2>
+          <h2 className="text-3xl font-bold text-[#1B5E20]">Moving from Cork Nationwide</h2>
 
           <p>
-            While we specialise in Cork removals, FloRemoval provides nationwide moving services.
-            Many customers move to Dublin, Galway, Limerick, Waterford, and other counties with our
-            professional assistance.
+            While we specialise in Cork removals, FloRemoval provides nationwide moving services. Whether relocating
+            to Dublin, Galway, or any other county in Ireland, our team ensures safe and timely transport.
           </p>
 
           <h2 className="text-3xl font-bold text-[#1B5E20]">Why Choose FloRemoval?</h2>
 
           <ul className="list-disc pl-6 space-y-2">
-            <li>Fully licensed & insured moving company</li>
-            <li>Experienced, professional, and punctual movers</li>
+            <li>Fully licensed & insured movers</li>
+            <li>Experienced, professional, and punctual team</li>
             <li>Eco-friendly packing materials</li>
             <li>Transparent quotes with no hidden fees</li>
-            <li>Flexible scheduling to fit your needs</li>
+            <li>Flexible scheduling for your convenience</li>
             <li>Nationwide coverage across Ireland</li>
           </ul>
 
+          <h2 className="text-3xl font-bold text-[#1B5E20]">Contact FloRemoval in Cork</h2>
+
           <p>
-            Call FloRemoval at{' '}
-            <a href="tel:0899703503" className="text-[#1B5E20] font-semibold">
-              089-970-3503
-            </a>{' '}
-            today for a free quote and let our team take care of your Cork move with professionalism
-            and ease.
+            Call us today at <a href="tel:0899703503" className="text-[#1B5E20] font-semibold">089-970-3503</a> for a free quote.
+            Our friendly team will provide a tailored estimate and help make your Cork move smooth and stress-free.
           </p>
         </div>
       </section>
