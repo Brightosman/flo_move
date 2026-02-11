@@ -1,18 +1,20 @@
-import type { Metadata } from 'next';
-
-export const metadata: Metadata = {
-  title: 'Removals in Dublin | House & Office Moving | FloRemoval',
+export const metadata = {
+  title: 'Dublin Removals | FloRemoval',
   description:
-    'Looking for professional removals in Dublin? FloRemoval offers trusted, fully insured house and office moving services across Dublin.',
-  alternates: {
-    canonical: '/services/dublin-removals',
-  },
+    'Professional removals in Dublin for homes and offices. Fully insured, experienced movers providing stress-free local and nationwide moves.',
   openGraph: {
-    title: 'Removals in Dublin | FloRemoval',
+    title: 'Dublin Removals | FloRemoval',
     description:
-      'Trusted house and office removals in Dublin. Reliable, insured and stress-free moving services.',
+      'Professional removals in Dublin for homes and offices. Fully insured, experienced movers providing stress-free local and nationwide moves.',
     url: 'https://www.floremoval.com/services/dublin-removals',
     siteName: 'FloRemoval',
+    // images: [
+    //   {
+    //     url: 'https://www.floremoval.com/images/services/dublin-hero.jpg',
+    //     width: 1200,
+    //     height: 630,
+    //   },
+    // ],
     type: 'website',
   },
 };
